@@ -10,17 +10,23 @@ import UIKit
 
 class ShowingsTableViewCell: UITableViewCell {
 
-    var showingDescriptionLabel: UILabel!
+    var showingTimeLabel: UILabel!
     var showingTitleLabel: UILabel!
     
     var showing: Showing? {
         didSet {
             if let s = showing {
                 showingTitleLabel.text = s.title
-                showingDescriptionLabel.text = s.description
+                
+                
+                if s.startTime != nil {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "h:mm a"
+                    let time = dateFormatter.string(from: s.startTime!)
+                    showingTimeLabel.text = time
+                }
+                
 
-                
-                
                 setNeedsLayout()
             }
         }
@@ -28,15 +34,16 @@ class ShowingsTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        self.selectionStyle = .none
-        
-        showingDescriptionLabel = UILabel()
-        contentView.addSubview(showingDescriptionLabel)
+                
+        showingTimeLabel = UILabel()
+        showingTimeLabel.font = UIFont(name: "Avenir", size: 18)
+        contentView.addSubview(showingTimeLabel)
         
         showingTitleLabel = UILabel()
+        showingTitleLabel.font = UIFont(name: "Avenir", size: 24)
+        showingTitleLabel.adjustsFontSizeToFitWidth = true
+        showingTitleLabel.numberOfLines = 0
         contentView.addSubview(showingTitleLabel)
-        
         
     }
     
@@ -50,8 +57,10 @@ class ShowingsTableViewCell: UITableViewCell {
         let w = contentView.frame.width
         let h = contentView.frame.height
         
-        showingDescriptionLabel.frame = CGRect(x: 12, y: 50, width: w - 12, height: 40)
-        showingTitleLabel.frame = CGRect(x: 12, y: 12, width: self.contentView.frame.width - 12, height: 40)
+        
+        
+        showingTimeLabel.frame = CGRect(x: 12, y: 50, width: w - 24, height: 40)
+        showingTitleLabel.frame = CGRect(x: 12, y: 12, width: self.contentView.frame.width - 24, height: 40)
         
     }
 

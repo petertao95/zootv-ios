@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowingsViewController: UIViewController, UITableViewDataSource {
+class ShowingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var channel: Channel!
     var showingsTableView: UITableView!
@@ -16,8 +16,28 @@ class ShowingsViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         addTableView()
-        self.title = channel.name + " (\(channel.number))"
-        print(channel.showings)
+        setTitle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if let indexPath = showingsTableView.indexPathForSelectedRow {
+            showingsTableView.deselectRow(at: indexPath, animated: animated)
+        }
+    }
+    
+    func setTitle() {
+        let titleButton = UIButton()
+        titleButton.setTitle(channel.name + " (\(channel.number))", for: .normal)
+        titleButton.titleLabel?.font = UIFont(name: "Avenir", size: 22)
+        titleButton.addTarget(self, action: #selector(self.scrollToTop), for: .touchUpInside)
+        titleButton.setTitleColor(UIColor.black, for: .normal)
+        
+        self.navigationItem.titleView = titleButton
+    }
+    
+    func scrollToTop() {
+        self.showingsTableView.setContentOffset(CGPoint.zero, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,6 +59,13 @@ class ShowingsViewController: UIViewController, UITableViewDataSource {
         self.view.addSubview(showingsTableView)
         showingsTableView.rowHeight = 100
         showingsTableView.dataSource = self
+        showingsTableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = SingleShowingViewController()
+        nextVC.showing = channel.showings[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
 }

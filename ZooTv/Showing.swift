@@ -15,6 +15,7 @@ struct Showing {
     var year: String?
     var subtitle: String?
     var description: String?
+    var startTime: Date?
     
     init(data: JSON) {
         self.length = data["length"].int
@@ -22,5 +23,9 @@ struct Showing {
         self.year = data["year"].string
         self.subtitle = data["subtitle"].string
         self.description = data["description"].string
+        
+        if let startTimeInMillis = data["startTime"].double {
+            startTime = Date(timeIntervalSince1970: TimeInterval(exactly: startTimeInMillis/1000)!)
+        }
     }
 }

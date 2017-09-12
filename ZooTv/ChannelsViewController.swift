@@ -14,6 +14,9 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
     var channelsTableView:UITableView!
     var leftItem: UIBarButtonItem!
     var timeLabel: UILabel!
+    var filteredChannels = [Channel]()
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -25,9 +28,11 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTitle()
-        addLeftBarButtonItem()
         setupTable()
+        setTitle()
+        setupSearchBar()
+        addLeftBarButtonItem()
+        
         loadChannels()
         
     }
@@ -37,6 +42,14 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
         if let indexPath = channelsTableView.indexPathForSelectedRow {
             channelsTableView.deselectRow(at: indexPath, animated: animated)
         }
+    }
+    
+    func setupSearchBar() {
+        searchController.searchResultsUpdater = self
+        channelsTableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Shows, channels, descriptions"
     }
     
     func handleRefresh(_ refreshControl: UIRefreshControl) {
@@ -58,6 +71,7 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
         UIView.animate(withDuration: 0.3) {
             self.timeLabel.text = "Loading..."
             self.timeLabel.textColor = UIColor.lightGray
+            self.timeLabel.sizeToFit()
         }
         
         Global.loadChannels(completion: reloadView)
@@ -65,7 +79,17 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func setTitle() {
-        self.title = "ZooTV Guide"
+        var titleButton = UIButton()
+        titleButton.setTitle("ZooTV", for: .normal)
+        titleButton.titleLabel?.font = UIFont(name: "Avenir", size: 22)
+        titleButton.addTarget(self, action: #selector(self.scrollToTop), for: .touchUpInside)
+        titleButton.setTitleColor(UIColor.black, for: .normal)
+        
+        self.navigationItem.titleView = titleButton
+    }
+    
+    func scrollToTop() {
+        self.channelsTableView.setContentOffset(CGPoint.zero, animated: true)
     }
     
     func reloadView() {
@@ -85,7 +109,12 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Global.channels.count
+        if isFiltering() {
+            return filteredChannels.count
+        } else {
+            return Global.channels.count
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,13 +122,28 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
         if(cell == nil) {
             cell = ChannelTableViewCell(style: .default, reuseIdentifier: "channelCell");
         }
-        cell!.channel = Global.channels[indexPath.row]
+        let currChannel: Channel!
+        
+        if isFiltering() {
+            currChannel = filteredChannels[indexPath.row]
+        } else {
+            currChannel = Global.channels[indexPath.row]
+        }
+        
+        cell!.channel = currChannel
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = ShowingsViewController()
-        nextVC.channel = Global.channels[indexPath.row]
+        
+        if isFiltering() {
+            nextVC.channel = filteredChannels[indexPath.row]
+        } else {
+            nextVC.channel = Global.channels[indexPath.row]
+        }
+        
+        
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
@@ -112,6 +156,35 @@ class ChannelsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.channelsTableView.insertSubview(refreshControl, at: 0)
     }
     
+    // MARK: - Private instance methods
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredChannels = Global.channels.filter({( channel : Channel) -> Bool in
+            
+            if searchBarIsEmpty() {
+                return true
+            } else {
+                return channel.searchText.contains(searchText.lowercased())
+            }
+        })
+        channelsTableView.reloadData()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive
+    }
+    
 
 }
 
+extension ChannelsViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}

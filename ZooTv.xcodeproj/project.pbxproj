@@ -22,6 +22,7 @@
 		8646F5811F66E8AA0098A2A3 /* Showing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5801F66E8AA0098A2A3 /* Showing.swift */; };
 		8646F5831F66F2370098A2A3 /* ShowingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5821F66F2370098A2A3 /* ShowingsViewController.swift */; };
 		8646F5851F66F6510098A2A3 /* ShowingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5841F66F6510098A2A3 /* ShowingsTableViewCell.swift */; };
+		8646F5871F6835800098A2A3 /* SingleShowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5861F6835800098A2A3 /* SingleShowingViewController.swift */; };
 		A1371F8C96016A4CCB1D334C /* Pods_ZooTvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4440F145908E9B9EA842F5A /* Pods_ZooTvTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		8646F5801F66E8AA0098A2A3 /* Showing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showing.swift; sourceTree = "<group>"; };
 		8646F5821F66F2370098A2A3 /* ShowingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowingsViewController.swift; sourceTree = "<group>"; };
 		8646F5841F66F6510098A2A3 /* ShowingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowingsTableViewCell.swift; sourceTree = "<group>"; };
+		8646F5861F6835800098A2A3 /* SingleShowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleShowingViewController.swift; sourceTree = "<group>"; };
 		A4440F145908E9B9EA842F5A /* Pods_ZooTvTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooTvTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A40512F2DE9E9AC60B65AC /* Pods-ZooTv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTv.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTv/Pods-ZooTv.release.xcconfig"; sourceTree = "<group>"; };
 		F781E0520DCD13AEEB5CC498 /* Pods_ZooTvUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooTvUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				8646F5801F66E8AA0098A2A3 /* Showing.swift */,
 				8646F5511F662CF80098A2A3 /* Assets.xcassets */,
 				8646F5821F66F2370098A2A3 /* ShowingsViewController.swift */,
+				8646F5861F6835800098A2A3 /* SingleShowingViewController.swift */,
 				8646F5841F66F6510098A2A3 /* ShowingsTableViewCell.swift */,
 				8646F5531F662CF80098A2A3 /* LaunchScreen.storyboard */,
 				8646F5561F662CF80098A2A3 /* Info.plist */,
@@ -485,6 +488,7 @@
 				8646F5831F66F2370098A2A3 /* ShowingsViewController.swift in Sources */,
 				8646F5811F66E8AA0098A2A3 /* Showing.swift in Sources */,
 				8646F54B1F662CF80098A2A3 /* AppDelegate.swift in Sources */,
+				8646F5871F6835800098A2A3 /* SingleShowingViewController.swift in Sources */,
 				8646F57D1F662E740098A2A3 /* ChannelTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

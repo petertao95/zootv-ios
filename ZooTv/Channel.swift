@@ -16,6 +16,7 @@ class Channel {
     var number: String
     var image: UIImage?
     var showings = [Showing]()
+    var searchText = ""
 
     
     // MARK: Initialization
@@ -26,6 +27,8 @@ class Channel {
         self.image = UIImage(named: self.name) ?? UIImage(named: "unavailable")
         self.number = data["channelNumber"].stringValue
         initShowings(data: data["showings"])
+        
+        initSearchText()
     }
     
     func initShowings(data: JSON) {
@@ -33,6 +36,18 @@ class Channel {
             let newShowing = Showing(data: showing.1)
             showings.append(newShowing)
         }
+    }
+    
+    func initSearchText() {
+        searchText = "\(self.name)\(self.number)"
+        for s in showings {
+            let t = s.title ?? ""
+            let d = s.description ?? ""
+            let su = s.subtitle ?? ""
+            let y = "\(s.year ?? "")"
+            searchText.append("\(t)\(d)\(su)\(y)")
+        }
+        searchText = searchText.lowercased()
     }
     
     
