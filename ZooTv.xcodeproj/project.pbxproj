@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3295E9DC08907A51D4553C87 /* Pods_ZooTv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97777BEEFA5189FBFBEDAB0 /* Pods_ZooTv.framework */; };
+		5E52D1629BD048E4B2C93DA7 /* Pods_ZooTvUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F781E0520DCD13AEEB5CC498 /* Pods_ZooTvUITests.framework */; };
 		8646F54B1F662CF80098A2A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F54A1F662CF80098A2A3 /* AppDelegate.swift */; };
-		8646F54D1F662CF80098A2A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F54C1F662CF80098A2A3 /* ViewController.swift */; };
-		8646F5501F662CF80098A2A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8646F54E1F662CF80098A2A3 /* Main.storyboard */; };
+		8646F54D1F662CF80098A2A3 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F54C1F662CF80098A2A3 /* ChannelsViewController.swift */; };
 		8646F5521F662CF80098A2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8646F5511F662CF80098A2A3 /* Assets.xcassets */; };
 		8646F5551F662CF80098A2A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8646F5531F662CF80098A2A3 /* LaunchScreen.storyboard */; };
 		8646F5601F662CF80098A2A3 /* ZooTvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F55F1F662CF80098A2A3 /* ZooTvTests.swift */; };
 		8646F56B1F662CF80098A2A3 /* ZooTvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F56A1F662CF80098A2A3 /* ZooTvUITests.swift */; };
+		8646F5791F662DF60098A2A3 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5781F662DF60098A2A3 /* MainNavigationController.swift */; };
+		8646F57B1F662E420098A2A3 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F57A1F662E420098A2A3 /* Channel.swift */; };
+		8646F57D1F662E740098A2A3 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F57C1F662E740098A2A3 /* ChannelTableViewCell.swift */; };
+		8646F57F1F662F670098A2A3 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F57E1F662F670098A2A3 /* Global.swift */; };
+		8646F5811F66E8AA0098A2A3 /* Showing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5801F66E8AA0098A2A3 /* Showing.swift */; };
+		8646F5831F66F2370098A2A3 /* ShowingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5821F66F2370098A2A3 /* ShowingsViewController.swift */; };
+		8646F5851F66F6510098A2A3 /* ShowingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8646F5841F66F6510098A2A3 /* ShowingsTableViewCell.swift */; };
+		A1371F8C96016A4CCB1D334C /* Pods_ZooTvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4440F145908E9B9EA842F5A /* Pods_ZooTvTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D982C5EE3710BFC5E8A2C35 /* Pods-ZooTv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTv/Pods-ZooTv.debug.xcconfig"; sourceTree = "<group>"; };
+		13DBC9348197D2C7DAA15D0D /* Pods-ZooTvUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTvUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTvUITests/Pods-ZooTvUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D1B461E497B3A651B5A2372 /* Pods-ZooTvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTvTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTvTests/Pods-ZooTvTests.debug.xcconfig"; sourceTree = "<group>"; };
+		34A620B41FA2C950417446D0 /* Pods-ZooTvUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTvUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTvUITests/Pods-ZooTvUITests.release.xcconfig"; sourceTree = "<group>"; };
+		600845BC923D9F6C402B189D /* Pods-ZooTvTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTvTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTvTests/Pods-ZooTvTests.release.xcconfig"; sourceTree = "<group>"; };
 		8646F5471F662CF80098A2A3 /* ZooTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8646F54A1F662CF80098A2A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8646F54C1F662CF80098A2A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8646F54F1F662CF80098A2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8646F54C1F662CF80098A2A3 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 		8646F5511F662CF80098A2A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8646F5541F662CF80098A2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8646F5561F662CF80098A2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +60,17 @@
 		8646F5661F662CF80098A2A3 /* ZooTvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooTvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8646F56A1F662CF80098A2A3 /* ZooTvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooTvUITests.swift; sourceTree = "<group>"; };
 		8646F56C1F662CF80098A2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8646F5781F662DF60098A2A3 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		8646F57A1F662E420098A2A3 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		8646F57C1F662E740098A2A3 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		8646F57E1F662F670098A2A3 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		8646F5801F66E8AA0098A2A3 /* Showing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showing.swift; sourceTree = "<group>"; };
+		8646F5821F66F2370098A2A3 /* ShowingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowingsViewController.swift; sourceTree = "<group>"; };
+		8646F5841F66F6510098A2A3 /* ShowingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowingsTableViewCell.swift; sourceTree = "<group>"; };
+		A4440F145908E9B9EA842F5A /* Pods_ZooTvTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooTvTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A40512F2DE9E9AC60B65AC /* Pods-ZooTv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooTv.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZooTv/Pods-ZooTv.release.xcconfig"; sourceTree = "<group>"; };
+		F781E0520DCD13AEEB5CC498 /* Pods_ZooTvUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooTvUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F97777BEEFA5189FBFBEDAB0 /* Pods_ZooTv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooTv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3295E9DC08907A51D4553C87 /* Pods_ZooTv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1371F8C96016A4CCB1D334C /* Pods_ZooTvTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +94,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E52D1629BD048E4B2C93DA7 /* Pods_ZooTvUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B7BB05B196E14CBBCF88D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F97777BEEFA5189FBFBEDAB0 /* Pods_ZooTv.framework */,
+				A4440F145908E9B9EA842F5A /* Pods_ZooTvTests.framework */,
+				F781E0520DCD13AEEB5CC498 /* Pods_ZooTvUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8646F53E1F662CF80098A2A3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +118,8 @@
 				8646F55E1F662CF80098A2A3 /* ZooTvTests */,
 				8646F5691F662CF80098A2A3 /* ZooTvUITests */,
 				8646F5481F662CF80098A2A3 /* Products */,
+				EA132DBF3244A7772C8520B8 /* Pods */,
+				34B7BB05B196E14CBBCF88D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,9 +137,15 @@
 			isa = PBXGroup;
 			children = (
 				8646F54A1F662CF80098A2A3 /* AppDelegate.swift */,
-				8646F54C1F662CF80098A2A3 /* ViewController.swift */,
-				8646F54E1F662CF80098A2A3 /* Main.storyboard */,
+				8646F5781F662DF60098A2A3 /* MainNavigationController.swift */,
+				8646F54C1F662CF80098A2A3 /* ChannelsViewController.swift */,
+				8646F57C1F662E740098A2A3 /* ChannelTableViewCell.swift */,
+				8646F57E1F662F670098A2A3 /* Global.swift */,
+				8646F57A1F662E420098A2A3 /* Channel.swift */,
+				8646F5801F66E8AA0098A2A3 /* Showing.swift */,
 				8646F5511F662CF80098A2A3 /* Assets.xcassets */,
+				8646F5821F66F2370098A2A3 /* ShowingsViewController.swift */,
+				8646F5841F66F6510098A2A3 /* ShowingsTableViewCell.swift */,
 				8646F5531F662CF80098A2A3 /* LaunchScreen.storyboard */,
 				8646F5561F662CF80098A2A3 /* Info.plist */,
 			);
@@ -125,6 +170,19 @@
 			path = ZooTvUITests;
 			sourceTree = "<group>";
 		};
+		EA132DBF3244A7772C8520B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D982C5EE3710BFC5E8A2C35 /* Pods-ZooTv.debug.xcconfig */,
+				C3A40512F2DE9E9AC60B65AC /* Pods-ZooTv.release.xcconfig */,
+				1D1B461E497B3A651B5A2372 /* Pods-ZooTvTests.debug.xcconfig */,
+				600845BC923D9F6C402B189D /* Pods-ZooTvTests.release.xcconfig */,
+				13DBC9348197D2C7DAA15D0D /* Pods-ZooTvUITests.debug.xcconfig */,
+				34A620B41FA2C950417446D0 /* Pods-ZooTvUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8646F56F1F662CF80098A2A3 /* Build configuration list for PBXNativeTarget "ZooTv" */;
 			buildPhases = (
+				AE96D561F43D6897580215AE /* [CP] Check Pods Manifest.lock */,
 				8646F5431F662CF80098A2A3 /* Sources */,
 				8646F5441F662CF80098A2A3 /* Frameworks */,
 				8646F5451F662CF80098A2A3 /* Resources */,
+				13937D03233BF8572AE98EAE /* [CP] Embed Pods Frameworks */,
+				D9B4B031A14BC4A80E21CF22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8646F5721F662CF80098A2A3 /* Build configuration list for PBXNativeTarget "ZooTvTests" */;
 			buildPhases = (
+				2ECD436B3C9EC02AB57F107C /* [CP] Check Pods Manifest.lock */,
 				8646F5571F662CF80098A2A3 /* Sources */,
 				8646F5581F662CF80098A2A3 /* Frameworks */,
 				8646F5591F662CF80098A2A3 /* Resources */,
+				BB53219D4C398260D2CC2A13 /* [CP] Embed Pods Frameworks */,
+				786B2B84B9E66D9572528BBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8646F5751F662CF80098A2A3 /* Build configuration list for PBXNativeTarget "ZooTvUITests" */;
 			buildPhases = (
+				E8103E28412824499E508D9A /* [CP] Check Pods Manifest.lock */,
 				8646F5621F662CF80098A2A3 /* Sources */,
 				8646F5631F662CF80098A2A3 /* Frameworks */,
 				8646F5641F662CF80098A2A3 /* Resources */,
+				6FBD8ACDC1E96F93CC57C61B /* [CP] Embed Pods Frameworks */,
+				69F60CD25291E14D026DE3CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +301,6 @@
 			files = (
 				8646F5551F662CF80098A2A3 /* LaunchScreen.storyboard in Resources */,
 				8646F5521F662CF80098A2A3 /* Assets.xcassets in Resources */,
-				8646F5501F662CF80098A2A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +320,172 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13937D03233BF8572AE98EAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZooTv/Pods-ZooTv-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZooTv/Pods-ZooTv-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2ECD436B3C9EC02AB57F107C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZooTvTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69F60CD25291E14D026DE3CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZooTvUITests/Pods-ZooTvUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FBD8ACDC1E96F93CC57C61B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZooTvUITests/Pods-ZooTvUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		786B2B84B9E66D9572528BBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZooTvTests/Pods-ZooTvTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE96D561F43D6897580215AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZooTv-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB53219D4C398260D2CC2A13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZooTvTests/Pods-ZooTvTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9B4B031A14BC4A80E21CF22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZooTv/Pods-ZooTv-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8103E28412824499E508D9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZooTvUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8646F5431F662CF80098A2A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8646F54D1F662CF80098A2A3 /* ViewController.swift in Sources */,
+				8646F5791F662DF60098A2A3 /* MainNavigationController.swift in Sources */,
+				8646F57B1F662E420098A2A3 /* Channel.swift in Sources */,
+				8646F57F1F662F670098A2A3 /* Global.swift in Sources */,
+				8646F54D1F662CF80098A2A3 /* ChannelsViewController.swift in Sources */,
+				8646F5851F66F6510098A2A3 /* ShowingsTableViewCell.swift in Sources */,
+				8646F5831F66F2370098A2A3 /* ShowingsViewController.swift in Sources */,
+				8646F5811F66E8AA0098A2A3 /* Showing.swift in Sources */,
 				8646F54B1F662CF80098A2A3 /* AppDelegate.swift in Sources */,
+				8646F57D1F662E740098A2A3 /* ChannelTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +521,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8646F54E1F662CF80098A2A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8646F54F1F662CF80098A2A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8646F5531F662CF80098A2A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -412,6 +629,7 @@
 		};
 		8646F5701F662CF80098A2A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D982C5EE3710BFC5E8A2C35 /* Pods-ZooTv.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZooTv/Info.plist;
@@ -424,6 +642,7 @@
 		};
 		8646F5711F662CF80098A2A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3A40512F2DE9E9AC60B65AC /* Pods-ZooTv.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZooTv/Info.plist;
@@ -436,6 +655,7 @@
 		};
 		8646F5731F662CF80098A2A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D1B461E497B3A651B5A2372 /* Pods-ZooTvTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,6 +670,7 @@
 		};
 		8646F5741F662CF80098A2A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 600845BC923D9F6C402B189D /* Pods-ZooTvTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +685,7 @@
 		};
 		8646F5761F662CF80098A2A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13DBC9348197D2C7DAA15D0D /* Pods-ZooTvUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ZooTvUITests/Info.plist;
@@ -477,6 +699,7 @@
 		};
 		8646F5771F662CF80098A2A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34A620B41FA2C950417446D0 /* Pods-ZooTvUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ZooTvUITests/Info.plist;
@@ -507,6 +730,7 @@
 				8646F5711F662CF80098A2A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8646F5721F662CF80098A2A3 /* Build configuration list for PBXNativeTarget "ZooTvTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +739,7 @@
 				8646F5741F662CF80098A2A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8646F5751F662CF80098A2A3 /* Build configuration list for PBXNativeTarget "ZooTvUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +748,7 @@
 				8646F5771F662CF80098A2A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
