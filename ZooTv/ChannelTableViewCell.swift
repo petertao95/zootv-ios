@@ -43,9 +43,9 @@ class ChannelTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let w = contentView.frame.width
-        let h = contentView.frame.height
-        
+//        let w = contentView.frame.width
+//        let h = contentView.frame.height
+//      
         
         let imageLeading = NSLayoutConstraint(item: channelImageView, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 12)
         let imageTop = NSLayoutConstraint(item: channelImageView, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 12)
@@ -60,7 +60,7 @@ class ChannelTableViewCell: UITableViewCell {
         let numberCenterY = NSLayoutConstraint(item: channelNumberLabel, attribute: .centerY, relatedBy: .equal, toItem: contentView, attribute: .centerY, multiplier: 1, constant: 0)
         let numberHeight = NSLayoutConstraint(item: channelNumberLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: contentView.frame.height * 0.6)
         channelNumberLabel.translatesAutoresizingMaskIntoConstraints = false
-        channelNumberLabel.font = UIFont(name: "Avenir", size: 69)
+        channelNumberLabel.font = UIFont(name: "Avenir-Light", size: 55)
         channelNumberLabel.adjustsFontSizeToFitWidth = true
         self.addConstraints([numberTrailing, numberCenterY, numberHeight])
         
