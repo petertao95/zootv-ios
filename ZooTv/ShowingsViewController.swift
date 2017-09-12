@@ -30,15 +30,16 @@ class ShowingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let titleButton = UIButton()
         titleButton.setTitle(channel.name + " (\(channel.number))", for: .normal)
         titleButton.titleLabel?.font = UIFont(name: "Avenir", size: 22)
-        titleButton.addTarget(self, action: #selector(self.scrollToTop), for: .touchUpInside)
+//        titleButton.addTarget(self, action: #selector(self.scrollToTop), for: .touchUpInside)
         titleButton.setTitleColor(UIColor.black, for: .normal)
         
         self.navigationItem.titleView = titleButton
     }
     
-    func scrollToTop() {
-        self.showingsTableView.setContentOffset(CGPoint.zero, animated: true)
-    }
+    
+//    func scrollToTop() {
+//        self.showingsTableView.setContentOffset(CGPoint.zero, animated: true)
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channel.showings.count

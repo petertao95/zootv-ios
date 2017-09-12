@@ -24,7 +24,7 @@ class Channel {
     init(data: JSON) {
         // Initialize stored properties.
         self.name = data["channelName"].stringValue
-        self.image = UIImage(named: self.name) ?? UIImage(named: "unavailable")
+        self.image = UIImage(named: self.name) ?? UIImage(named: "default")
         self.number = data["channelNumber"].stringValue
         initShowings(data: data["showings"])
         
